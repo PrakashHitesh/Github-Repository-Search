@@ -10,6 +10,7 @@ function fetchRepositories() {
 function fetchUserRepositories(username, page) {
     const url = `https://api.github.com/users/${username}/repos?page=${page}&per_page=${repositoriesPerPage}`;
 
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
